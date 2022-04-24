@@ -31,7 +31,7 @@
     $mensagem = "<h2> Segue abaixo o nosso token para confirmação de cadastro: </h2>";
     $mensagem .="<h3>".random_int(1000, 9999)."</h3>";
     $mensagem .= "<p>Para confirmar, você precisa entrar na página abaixo e colocar o número de token para confirmação de cadastro.</p>";
-    $mensagem .= "http://localhost/SAVETHEDATE/WEBPAGES/open/confirmacaoCadastro.html";
+    $mensagem .= "http://localhost/WEBPAGES/open/confirmacaoCadastro.html";
     $mail->msgHTML($mensagem);
     $mail->send();
 ?>

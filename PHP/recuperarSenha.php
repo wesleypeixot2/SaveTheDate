@@ -29,7 +29,7 @@
     $mail->Subject = "Esqueceu a senha";
     $mensagem = "<h1> Token para cadastrar nova senha </h1>";
     $mensagem .="<h3>".random_int(1000, 9999)."</h3>";
-    $mensagem .= "http://localhost/SAVETHEDATE/WEBPAGES/open/recuperarSenha.html";
+    $mensagem .= "http://localhost/SAVETHEDATE/open/recuperarSenha.html";
     $mail->msgHTML($mensagem);
     $mail->send();
 
