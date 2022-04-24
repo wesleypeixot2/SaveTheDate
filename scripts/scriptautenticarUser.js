@@ -8,7 +8,7 @@ function login(){
         login: login,
         senha: senha,
     }, function (data) {
-        location.href = "../restrict/dashboard.html";
+        location.href = "../restrict/dashboard.php";
     }).fail(function(response, textStatus, errorThrown){
         if(response.status == 404){
             console.log("erro");
