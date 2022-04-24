@@ -1,0 +1,455 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.menu ul{
+    list-style: none;
+}
+.menu ul ul{
+    position: absolute;
+    z-index: 999;
+    visibility: hidden;
+}
+.menu ul li{
+    width: auto;
+    float: left;
+    padding: 0 10px;
+    color: purple;
+}
+.menu ul li:hover ul{
+    visibility: visible;
+}
+.menu ul ul li{
+    margin-left: -32px;
+    float: none;
+    border:  solid 1px #ccc;
+    border-radius: 2px;
+    background-color: #f0f0f0;
+}
+.menu a{
+    padding: 5px 40px;
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    
+}
+.menu a:hover{
+    color: purple;
+    columns: #555;
+}
+svg{
+    padding: 0px;
+    margin-bottom: 2px;
+}
+.btn-menu{
+    color: purple;
+}
+main{
+    margin-top: 80px;
+}
+
+/*Menu Hamburguer*/
+#btn-mobile{
+    display: none;
+}
+.login-mobile{
+    color: black;
+    display: none;
+}
+
+/*Footer*/
+footer{
+	background-color: black;
+}
+.listadecontato{
+	display: flex;
+	flex-wrap: wrap;
+	text-align: center;
+	justify-content: space-between;
+}
+.menudecontato{
+	padding: 30px 0;
+}
+.socialmedia{
+	text-decoration: underline;
+	list-style-type: none;
+	text-decoration: none;
+	color: white;
+	font-weight: bolder;
+	font-size: 25px;
+	padding: 0 30px;
+}
+.contact{
+	list-style-type: none;
+	color: white;
+	align-items: center;
+	text-align: center;
+}
+.redesociais{
+	align-items: center;
+	color: white;
+	list-style-type: none;
+}
+
+/*Carroussel*/
+.carrossel{
+    margin-top: -20px;
+    width: 100%;
+    height: 100vl;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f0f0f0;
+}
+.slide{
+    width: 1500px;
+    height: auto;
+    overflow: hidden;
+    border-bottom-left-radius: 15px;
+    transition: all .4s;
+}
+.slides{
+    width: 5120px;
+    display: flex;
+}
+.image img{
+    width: auto;
+    height: auto;
+}
+#atual{
+    transition: all 2s;
+}
+#next{
+    position: absolute;
+    margin-top: -70px;
+    right: 5%;
+}
+#voltar{
+    position: absolute;
+    margin-top: -70px;
+    left: 5%;
+}
+#texto{
+    position: absolute;
+    top: 200px;
+    left: 60%;
+}
+.balls{
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: -65px;
+}
+.balls div{
+    transition: all .5s;
+    border: 3px solid black;
+    padding: 6px;
+    border-radius: 50%;
+    margin-right: 15px;
+    cursor: pointer;
+}
+.balls div:hover{
+    background-color: #555;
+}
+.imgAtual{
+    transition: all .5s;
+}
+
+/*Formulario - Login e Cadastro*/
+.formularioLogin{
+    border: lightgray solid 1px; 
+    margin: 30px auto;
+    text-align: center;
+    width: 350px;
+    opacity: 100;
+    background-color: #f0f0f0;
+}
+.formularioLogin .botao a {
+    color: white;
+}
+.title{
+    margin: 0 auto;
+    text-align: center;
+    color: green;
+    text-decoration: underline;
+}
+
+/*Cadastro*/
+#cadastro{
+    position: absolute;
+    top: 100px;
+    left: 40%;
+    text-align: center;
+}
+.nav_tabs{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 370px;
+    background-color: #f0f0f0;
+}
+.nav_tabs ul{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    text-decoration: none;
+    padding: 0 10px;
+}
+.nav_tabs ul li{
+    width: 50%;
+    display: inline;
+
+}
+.nav_tabs .label_title{
+    width: 100%;
+    padding: 5px 15px;
+    background-color: #f0f0f0;
+    display: block;
+    color: purple;
+    cursor: pointer;
+    text-align: center;
+}
+.rd_tabs:checked ~label{
+    background-color: purple;
+    color: white;
+}
+.rd_tabs{
+    display: none;
+}
+.content{
+    border-top: 3px solid purple;
+    background-color: #f0f0f0;
+    display: none;
+    position: absolute;
+    z-index: 0;
+    height: 200px;
+    width: auto;
+    left: 0;
+    right: 0;
+    margin: 0 10px;
+}
+.rd_tabs:checked ~.content{
+    display: block;
+}
+.form-label{
+    background-color: #f0f0f0;
+}
+.sub_tabs ul{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    text-decoration: none;
+    margin: 10px;
+}
+.sub_tabs ul li{
+    width: 50%;
+    display: inline;
+}
+.sub_tabs .label_title{
+    width: auto;
+    background-color: #f0f0f0;
+    display: block;
+    color: purple;
+    cursor: pointer;
+    text-align: center;
+
+}
+.sub_content{
+    border-top: 3px solid purple;
+    background-color: #f0f0f0;
+    display: none;
+    position: absolute;
+    z-index: 0;
+    height: 200px;
+    width: auto;
+    left: 0;
+    right: 0;
+    margin: 0 20px;
+}
+.rd_tabs:checked ~.sub_content{
+    display: block;
+}
+
+/*Principal*/
+.formulario_cad{
+    padding: 10px;
+}
+.img_cadastro{
+    object-fit: cover;
+    width: auto;
+    height: auto;
+}
+.img_cadastro img{
+    width: 100%;
+    margin-bottom: 15px;
+}
+.infoSenha h4{
+    margin-top: 5px;
+    font-size: 14px;
+}
+.infoSenha h5{
+    font-size: 12px;
+}
+.depoimento h4{
+    color: purple;
+    text-align: center;
+}
+.depoimento{
+    margin: 30px;
+}
+.cards_depoimentos{
+    display: flex;
+    justify-content: center;
+}
+.depoimento p{
+    text-align: justify;
+}
+.lista_convidados{
+    margin: 30px;;
+}
+.cards_servicos{
+    display: flex;
+    justify-content: center;
+}
+.card_service{
+    margin: 15px;
+}
+
+@media(max-width: 900px) {   
+    .btn-menu{
+        visibility: hidden;
+        padding: 0 15px;
+    }
+    .login-mobile{
+        display: block;
+    }
+    header {
+        height: 70px;
+        display: block;
+        font-size: 15px;
+    }
+    .menu_mobile{
+        margin: 0px 50%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 15px;
+        
+    }
+    #btn-mobile{
+        background-color: transparent;
+        padding: 10px;
+        display: block; 
+        display: flex;
+        font-size: 30px;
+        border: none;
+        cursor: pointer;
+    }
+    #navBarMobile.active .menu ul{
+        height: calc(100vh - 71px);
+        visibility: visible;
+    }
+    .menu ul{
+        display: block;
+        position: absolute;
+        width: 100%;
+        top: 70px;
+        right: 0px;
+        background-color: #f0f0f0;
+        height: 0px;        
+        transition: .6s;
+        z-index: 1000;
+        visibility: hidden;
+        overflow-y: auto;
+    }
+    .menu ul li{
+        width: 100%;
+        float: none;
+    }
+    .menu ul ul{
+        position: static;
+        overflow: hidden;
+        max-height: 0;
+        transition: all .4s;
+        border: none;
+    }
+    .menu ul li:hover ul{
+        height: auto;
+        max-height: 200px;
+    }
+    
+  
+    /*menu mobile*/
+	.listadecontato {
+		flex-direction: column;
+	}
+    /*Carrossel*/
+    .carrossel{
+        width: 100%;
+        height: 300px;
+    }
+
+    .slide{
+        width: 100%;
+        height: 300px;;
+    }
+    .image img{
+        width: 100%;
+        height: 300px;;
+    }
+    .formularioLogin{
+        border: lightgray solid 1px; 
+        margin: 20px auto;
+        text-align: center;
+        width: 350px;
+        opacity: 100;
+        background-color: #f0f0f0;
+    }
+    #texto{
+        position: absolute;
+        top: 80px;
+        left: 10%;
+    }
+    .infoSenha h4{
+        margin-top: 5px;
+        font-size: 14px;
+    }
+    .infoSenha h5{
+        font-size: 12px;
+    }
+    .depoimento h4{
+        color: purple;
+        text-align: center;
+    }
+    .depoimento{
+        margin: 30px;
+    }
+    .cards_depoimentos{
+        display: inline-block;
+        justify-content: center;
+    }
+    .depoimento p{
+        text-align: justify;
+    }
+    .lista_convidados{
+        margin: 30px;;
+    }
+    .cards_servicos{
+        display: inline-block; 
+        justify-content: center;
+    }
+    .card_service{
+        margin: 15px;
+    }
+    #cadastro{
+        position: absolute;
+        top: 80px;
+        left: 20%;
+        font-size: 8px;
+    }
+    .nav_tabs{
+        height: 500px;
+    }
+
+}
