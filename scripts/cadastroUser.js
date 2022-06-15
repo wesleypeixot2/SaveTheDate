@@ -37,19 +37,24 @@ function validaSenha(){
         senha1 = document.getElementById("senha1").value;
         senha2 = document.getElementById("senha2").value;
         if(senha1==senha2){
+            
             var hash = CryptoJS.SHA256($("#senha1").val());
-            $("#senha_hash").val(hash);
+            var hashCritografada = criptografar(hash);
+            $("#senha_hash").val(hashCritografada);
+            
             var dados = $("#formulario_cadastro").serialize();
+            //var dataCriptografada = criptografar(dados);
+
             $.ajax({
                 type: "POST",
-                data: dados,
                 url: "../PHP/cadastro.php",
+                data: dados,
                 success: function(retorno){
                     if(retorno == 'fail'){
                         document.getElementById('messages').innerHTML = "<div class='alert alert-danger' role='alert'>Errro ao cadastrar usuário!</div>"                
                     } else {
                         document.getElementById('messages').innerHTML = "<div class='alert alert-success' role='alert'>Finalize seu cadastro fazendo o login e confirmando o código via e-mail!</div>"
-                        window.location.href = "../open/login.html";
+                        window.location.href = "../webpages/login.html";
                     }
                 },
             });

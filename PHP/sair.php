@@ -1,9 +1,8 @@
 <?php
-    unset($_SESSION['registro']);
-    unset($_SESSION['login']);
-    unset($_SESSION['limite']);
-    unset($_SESSION['id']);
-    unset( $_SESSION['ativo']);
-    session_destroy();
-    header("Location:../open/index.html"); 
+    if(!isset($_SESSION)){session_start();}
+    
+    $_SESSION['ativo'] = false;
+    include "./validaSessao.php"
+
+    header("Location:../webpages/index.html"); 
 ?>

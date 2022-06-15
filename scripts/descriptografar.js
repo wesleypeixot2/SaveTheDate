@@ -3,7 +3,7 @@ function descriptografar (txtCripto){
         type: 'post',
         url: "../PHP/descriptografar.php",
         data: {
-            "mensagem": txtCripto.toString()
+            "mensagem": txtCripto
         }
     })
 }

@@ -4,8 +4,6 @@ function validaToken() {
 
     myId = cid.split('cid=');
     console.log(myId);
-
-    //console.log(myId);
     $.ajax({
         type: "POST",
         url: "../PHP/validaToken.php",
@@ -16,11 +14,11 @@ function validaToken() {
         success: function(retorno){
             if(retorno == "updated"){
                 localStorage.setItem('logado', true);
-                window.location.href = "./dashboard.php";    
+                window.location.href = "../webpages/dashboard.html";    
             }
         },
         error(a,b,c){
-            document.getElementById('messages').innerHTML = "<div class='alert alert-danger' role='alert'>Usuário ou senha inválidas!</div>"
+            document.getElementById('messages').innerHTML = "<div class='alert alert-danger' role='alert'>Token de acesso inválido!</div>"
         }
     });
 

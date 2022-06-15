@@ -29,18 +29,17 @@
     require 'PHPMailer-master/src/SMTP.php';
     $mail = new PHPMailer();
     // Configuração do e-mail
-    $mail->IsSMTP();
     $mail->Mailer = "smtp";
-    $mail->IsSMTP(); 
+    $mail->IsSMTP();
     $mail->CharSet = 'UTF-8';
     $mail->SMTPDebug = 0;
     $mail->SMTPAuth = true;     
     $mail->SMTPSecure = 'STARTTLS'; 
     $mail->Host = 'smtp-mail.outlook.com'; 
     $mail->Port = 587;
-    $mail->Username = 'savethedatecasamentos@outlook.com'; 
-    $mail->Password = '@Savethedate123';
-    $mail->SetFrom('savethedatecasamentos@outlook.com', ' Wesley da SaveTheDate');
+    $mail->Username = 'SaveTheDate.doNotReply@outlook.com.br'; 
+    $mail->Password = '@Savethedate321';
+    $mail->SetFrom('SaveTheDate.doNotReply@outlook.com.br', 'Wesley da SaveTheDate');
     $mail->addAddress($usuario,'');
     $mail->Subject = "Confirme seu cadastro";
     // Detalhes do envio de E-mail
@@ -48,7 +47,7 @@
     $mensagem .= "<p>Para confirmar, você precisa informar o seguinte token na plataforma!</p>";
     $mensagem .="<h3>".$token."</h3>";
     $mensagem .= "<br>Caso não tenha sido redirecionado para uma nova página use o link abaixo:<br>";
-    $mensagem .= "http://http://localhost/SAVETHEDATE/open/confirmacaoCadastro.html?cid=".$cid;
+    $mensagem .= "http://http://localhost/SAVETHEDATE/webpages/confirmacaoCadastro.html?cid=".$cid;
     $mensagem .= "<br><br><br>Atenciosamente, <b>SAVE THE DATE<b> - Ajudando a realizar sonhos!";
     $mail->msgHTML($mensagem);
     $mail->send();

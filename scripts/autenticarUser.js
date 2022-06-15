@@ -1,20 +1,20 @@
 function login2(){
-    console.log("faço a validação aqui");
-
-    var login = $("#email").val();
-    var senha = CryptoJS.SHA256($("#senha").val()).toString();
-
+    var senha = CryptoJS.SHA256($("#senha").val());
+    var senhaCripto = criptografar(senha);
     $.ajax({
         type: "post",
         url: "../PHP/sessao.php",
         data:{
-            login: login,
-            senha: senha
+            login: $("#email").val(),
+            senha: senhaCripto
         },
         success: function(retorno){
             console.log("retorno "+retorno)
             if(retorno == "requireValidation"){ 
-                location.href = "../open/confirmacaoCadastro.html";
+                location.href = "../webpages/confirmacaoCadastro.html";
+            } else if(retorno == "enviarTokenConfirmacao"){
+                enviaEmailConfirmacao();
+                location.href = "../webpages/confirmacaoCadastro.html";
             }
         }
         ,error(a,b,c){
@@ -24,17 +24,15 @@ function login2(){
     return;
 }
 
-function sair(){
+function enviaEmailConfirmacao(){
     $.ajax({
         type: "post",
-        url: "../PHP/sair.php",
+        url: "../PHP/enviaEmailValidacao.php",
         success: function(retorno){
-            location.href = "../open/index.html";
+            console.log("sucesso");
         }
         ,error(a,b,c){
-            document.getElementById('messages').innerHTML = "<div class='alert alert-danger' role='alert'>Usuário ou senha inválidas!</div>"
+            console.log("Erro no email");
         }
     });
-    return;
 }
-
